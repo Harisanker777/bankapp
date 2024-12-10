@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="bankapp.MainPage"
+             Title="MainPage">
+    
+    <StackLayout Padding="20">
+        <!-- Login Section -->
+        <StackLayout x:Name="LoginLayout" IsVisible="True">
+            <Label Text="Username" FontSize="Medium" />
+            <Entry x:Name="UsernameEntry" Placeholder="Enter Username" />
+
+            <Label Text="Password" FontSize="Medium" />
+            <Entry x:Name="PasswordEntry" Placeholder="Enter Password" IsPassword="True" />
+
+            <Button Text="Login" Clicked="OnLoginClicked" />
+        </StackLayout>
+
+        <!-- Home Section -->
+        <StackLayout x:Name="HomeLayout" IsVisible="False">
+            <Label x:Name="UsernameLabel" FontSize="Large" Text="Welcome, User!" />
+
+            <Button Text="User Details" Clicked="OnUserDetailsClicked" />
+            <Button Text="Account Details" Clicked="OnAccountDetailsClicked" />
+            <Button Text="Money Transfer" Clicked="OnMoneyTransferClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
